@@ -1,0 +1,187 @@
+{
+  "users": [
+    {
+      "id": "u_demo",
+      "email": "demo@prismpatch.app",
+      "passwordHash": "e300839dc0ec5cc28d8dbe867487b6aebce683da83a4688d2ff4c9022628d8df",
+      "salt": "prism-demo-salt",
+      "displayName": "Maya Spark",
+      "dateOfBirth": "1990-01-01",
+      "gender": "prefer-not-to-say",
+      "location": "",
+      "shareLocation": false,
+      "connectionRange": "local",
+      "publicProfile": true,
+      "reminders": true,
+      "allowMessages": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "userId": "u_demo",
+      "title": "Ocean turtle glow",
+      "notes": "Square drills · 45 colors · AB highlights",
+      "source": "Prism Crafts Studio",
+      "startedAt": "2026-05-04",
+      "details": "Working the turtle shell first, then saving the blue water for evening sessions.",
+      "progress": 68,
+      "completedSections": 8,
+      "totalSections": 12,
+      "image": "assets/ocean-turtle.svg"
+    },
+    {
+      "id": "p2",
+      "userId": "u_demo",
+      "title": "Sunset cottage gift",
+      "notes": "Round drills · due Aug 12 · framed",
+      "source": "Etsy kit shop",
+      "startedAt": "2026-06-01",
+      "details": "Gift for the hallway. Check frame depth before sealing.",
+      "progress": 34,
+      "completedSections": 4,
+      "totalSections": 12,
+      "image": "assets/sunset-cottage.svg"
+    },
+    {
+      "id": "p3",
+      "userId": "u_demo",
+      "title": "Rainbow florals",
+      "notes": "Custom canvas · color cleanup needed",
+      "source": "Custom photo kit",
+      "startedAt": "",
+      "details": "Use leftover AB drills in the flower centers.",
+      "progress": 12,
+      "completedSections": 1,
+      "totalSections": 10,
+      "image": "assets/rainbow-florals.svg"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "i1",
+      "userId": "u_demo",
+      "title": "Pet portrait with crystal collar",
+      "tag": "Custom gift",
+      "details": "Use a close-up photo and add AB drills around the collar so it catches light."
+    },
+    {
+      "id": "i2",
+      "userId": "u_demo",
+      "title": "Holiday ornament leftover set",
+      "tag": "Use leftovers",
+      "details": "Small wooden shapes, sealed leftovers, ribbon backs, and gift tags."
+    },
+    {
+      "id": "i3",
+      "userId": "u_demo",
+      "title": "Quiet lake for weekend sessions",
+      "tag": "Calm project",
+      "details": "Look for a square-drill kit with soft blues and a low confetti sky."
+    }
+  ],
+  "inventory": [
+    {
+      "id": "inv1",
+      "userId": "u_demo",
+      "type": "notStarted",
+      "label": "Unopened kits",
+      "quantity": 3,
+      "note": "Floral, cottage, and custom portrait are still boxed.",
+      "color": "#ff4fa3"
+    },
+    {
+      "id": "inv2",
+      "userId": "u_demo",
+      "type": "wax",
+      "label": "Pink wax squares",
+      "quantity": 6,
+      "note": "Two in the travel case, four in the drawer.",
+      "color": "#ff735d"
+    },
+    {
+      "id": "inv3",
+      "userId": "u_demo",
+      "type": "tray",
+      "label": "Sorting trays",
+      "quantity": 5,
+      "note": "Large white tray is best for AB drills.",
+      "color": "#24b6d9"
+    },
+    {
+      "id": "inv4",
+      "userId": "u_demo",
+      "type": "drillCode",
+      "code": "DMC 310",
+      "label": "DMC 310",
+      "quantity": 1,
+      "note": "Extra black drills from the turtle kit.",
+      "color": "#15121d"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "userId": "maker_florida",
+      "owner": "Lena",
+      "title": "Ocean Turtle Glow",
+      "meta": "Florida · local",
+      "notes": "Finished with blue AB drills and a glossy sealer.",
+      "image": "assets/ocean-turtle.svg",
+      "progress": 100,
+      "source": "Diamond Art Club",
+      "timeSpent": "38 hours across 5 weeks",
+      "startedAt": "2026-04-18",
+      "details": "Used square drills, sealed lightly, and framed with a white mat.",
+      "chatEnabled": true
+    },
+    {
+      "id": "g2",
+      "userId": "maker_colorado",
+      "owner": "Priya",
+      "title": "Sunset Cottage",
+      "meta": "Colorado · between states",
+      "notes": "Gift plan with frame notes and warm color substitutions.",
+      "image": "assets/sunset-cottage.svg",
+      "progress": 76,
+      "source": "Etsy custom kit",
+      "timeSpent": "21 hours so far",
+      "startedAt": "2026-05-22",
+      "details": "Swapped three oranges for softer peach tones to match the recipient's room.",
+      "chatEnabled": true
+    },
+    {
+      "id": "g3",
+      "userId": "maker_texas",
+      "owner": "Nora",
+      "title": "Rainbow Florals",
+      "meta": "Texas · local",
+      "notes": "Shared as a spring challenge with leftover drills.",
+      "image": "assets/rainbow-florals.svg",
+      "progress": 54,
+      "source": "Craft store kit",
+      "timeSpent": "14 hours",
+      "startedAt": "2026-06-05",
+      "details": "Working color by color and saving white background sections for last.",
+      "chatEnabled": false
+    },
+    {
+      "id": "g4",
+      "userId": "maker_canada",
+      "owner": "Maya",
+      "title": "Cosmic Owl",
+      "meta": "Canada · international",
+      "notes": "International inspiration from a maker group.",
+      "image": "assets/cosmic-owl.svg",
+      "progress": 92,
+      "source": "AliExpress kit",
+      "timeSpent": "33 hours",
+      "startedAt": "2026-03-29",
+      "details": "Added extra AB stars and used release paper to split the canvas into 16 sections.",
+      "chatEnabled": true
+    }
+  ],
+  "reports": [],
+  "blocks": [],
+  "messages": []
+}

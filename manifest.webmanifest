@@ -1,0 +1,17 @@
+{
+  "name": "Prism Patch",
+  "short_name": "Prism Patch",
+  "description": "A mobile-first diamond painting project, inventory, idea, and community app.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8fc",
+  "theme_color": "#ff4fa3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

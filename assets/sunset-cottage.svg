@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 600" role="img" aria-label="Mosaic diamond painting of a sunset cottage">
+  <defs>
+    <pattern id="gems" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M11 0 22 11 11 22 0 11Z" fill="#fff" opacity=".22"/>
+      <circle cx="11" cy="11" r="3" fill="#fff" opacity=".18"/>
+    </pattern>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ff5d8f"/>
+      <stop offset=".45" stop-color="#ffb83e"/>
+      <stop offset="1" stop-color="#7651c9"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="600" rx="48" fill="url(#sky)"/>
+  <circle cx="556" cy="146" r="88" fill="#ffe68a" opacity=".9"/>
+  <path d="M0 393c122-75 210-80 324-24 109 53 230 37 396-57v288H0Z" fill="#4a2b63"/>
+  <path d="M0 446c145-39 255-44 376-3 111 38 209 26 344-36v193H0Z" fill="#255c56"/>
+  <rect width="720" height="600" rx="48" fill="url(#gems)"/>
+  <g transform="translate(171 248)">
+    <path d="M40 140h302v156H40Z" fill="#fff5cf"/>
+    <path d="M6 154 190 18l190 136Z" fill="#833c69"/>
+    <path d="M84 137h215v159H84Z" fill="#ffd98d"/>
+    <path d="M129 183h58v58h-58ZM234 183h58v58h-58Z" fill="#4db9d4"/>
+    <path d="M156 296v-74h68v74" fill="#6f3c45"/>
+    <path d="M31 296h324" stroke="#3a244d" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <path d="M75 472c80-36 161-32 241 11 89 48 179 45 270-8" fill="none" stroke="#ffe68a" stroke-width="10" opacity=".58"/>
+</svg>

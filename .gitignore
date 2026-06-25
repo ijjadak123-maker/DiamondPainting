@@ -1,0 +1,8 @@
+node_modules/
+.npm-cache/
+www/
+ios/App/Pods/
+ios/App/Podfile.lock
+ios/App/build/
+ios/App/DerivedData/
+.DS_Store

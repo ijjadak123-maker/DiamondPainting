@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ff4fa3" />
+    <meta name="prism-patch-api" content="https://api.prismpatch.app/api" />
+    <title>Prism Patch</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sparkle-field" aria-hidden="true"></div>
+
+    <section class="login-screen" data-screen="login" aria-labelledby="login-title">
+      <div class="phone-frame auth-card">
+        <div class="brand-lockup">
+          <span class="brand-mark">PP</span>
+          <div>
+            <strong>Prism Patch</strong>
+            <small>Diamond painting studio</small>
+          </div>
+        </div>
+
+        <div class="auth-visual" aria-hidden="true">
+          <img src="assets/rainbow-florals.svg" alt="" />
+          <img src="assets/ocean-turtle.svg" alt="" />
+        </div>
+
+        <div class="auth-mode-toggle" role="tablist" aria-label="Account options">
+          <button class="active" type="button" role="tab" aria-selected="true" data-auth-mode="login">Sign in</button>
+          <button type="button" role="tab" aria-selected="false" data-auth-mode="register">Create account</button>
+        </div>
+
+        <p class="eyebrow" data-auth-eyebrow>Welcome back</p>
+        <h1 id="login-title">Keep every sparkling idea close.</h1>
+        <p class="screen-copy" data-auth-copy>Sign in to track projects, save supplies, manage privacy, and connect with diamond painting friends.</p>
+
+        <form class="auth-form" data-auth-form>
+          <label class="register-only hidden" data-register-only>
+            Display name
+            <input name="displayName" autocomplete="name" placeholder="Your maker name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" value="demo@prismpatch.app" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" autocomplete="current-password" value="sparkle123" required />
+          </label>
+          <label class="register-only hidden" data-register-only>
+            Date of birth
+            <input name="dateOfBirth" type="date" />
+          </label>
+          <label class="register-only hidden" data-register-only>
+            Gender
+            <select name="gender">
+              <option value="">Select an option</option>
+              <option value="woman">Woman</option>
+              <option value="man">Man</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="self-describe">Self-describe</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+            </select>
+          </label>
+          <button class="primary-action" type="submit" data-auth-submit>Sign in</button>
+        </form>
+
+        <button class="text-action" type="button" data-demo-login>Use built-in demo</button>
+      </div>
+    </section>
+
+    <section class="login-screen hidden" data-screen="onboarding" aria-labelledby="onboarding-title">
+      <div class="phone-frame auth-card onboarding-card">
+        <div class="brand-lockup">
+          <span class="brand-mark">PP</span>
+          <div>
+            <strong>Prism Patch</strong>
+            <small>First-time setup</small>
+          </div>
+        </div>
+
+        <p class="eyebrow">Finish your profile</p>
+        <h1 id="onboarding-title">Set your comfort level before you connect.</h1>
+        <p class="screen-copy">Date of birth and gender help with account safety and personalization. Location sharing stays off unless you choose it.</p>
+
+        <form class="auth-form" data-onboarding-form>
+          <label>
+            Date of birth
+            <input name="dateOfBirth" type="date" required />
+          </label>
+          <label>
+            Gender
+            <select name="gender" required>
+              <option value="">Select an option</option>
+              <option value="woman">Woman</option>
+              <option value="man">Man</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="self-describe">Self-describe</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+            </select>
+          </label>
+          <div class="toggle-row">
+            <span>Share my location with community features</span>
+            <label class="switch">
+              <input name="shareLocation" type="checkbox" data-location-toggle />
+              <span></span>
+            </label>
+          </div>
+          <label data-location-field class="muted-field">
+            Location, optional
+            <input name="location" placeholder="City, state or country" disabled />
+          </label>
+          <button class="primary-action" type="submit">Continue</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="app-device hidden" data-screen="app">
+      <header class="mobile-topbar">
+        <span class="brand-mark" aria-label="Prism Patch">PP</span>
+        <button class="icon-button" type="button" data-nav="home" aria-label="Home">
+          <span aria-hidden="true">⌂</span>
+        </button>
+      </header>
+
+      <main class="app-main">
+        <section class="app-view active" data-view="home" aria-labelledby="home-title">
+          <div class="hero-card">
+            <div>
+              <p class="eyebrow">Today in your studio</p>
+              <h1 id="home-title">What sparkle should we work on?</h1>
+              <p class="screen-copy">Pick a project, save a new idea, or check what your community is sharing.</p>
+            </div>
+            <img src="assets/cosmic-owl.svg" alt="Cosmic owl diamond painting preview" />
+          </div>
+
+          <section class="current-project-card" aria-labelledby="current-project-title">
+            <div class="section-title row-title">
+              <div>
+                <p class="eyebrow">Current project</p>
+                <h2 id="current-project-title">In progress now</h2>
+              </div>
+              <button class="mini-action" type="button" data-nav="projects">Open</button>
+            </div>
+            <div data-current-project></div>
+          </section>
+
+          <section class="home-overview-card" aria-labelledby="home-projects-title">
+            <div class="section-title row-title">
+              <div>
+                <p class="eyebrow">Projects</p>
+                <h2 id="home-projects-title">Queued for later</h2>
+              </div>
+              <button class="mini-action" type="button" data-nav="projects">Open</button>
+            </div>
+            <div class="next-list" data-next-projects></div>
+          </section>
+
+          <section class="home-overview-card" aria-labelledby="home-ideas-title">
+            <div class="section-title row-title">
+              <div>
+                <p class="eyebrow">Ideas</p>
+                <h2 id="home-ideas-title">Saved inspiration</h2>
+              </div>
+              <button class="mini-action" type="button" data-nav="ideas">Open</button>
+            </div>
+            <div class="idea-preview-list" data-home-ideas></div>
+          </section>
+
+        </section>
+
+        <section class="app-view" data-view="projects" aria-labelledby="projects-title">
+          <div class="section-title row-title">
+            <div>
+              <p class="eyebrow">Project tracker</p>
+              <h2 id="projects-title">Your active canvases</h2>
+            </div>
+            <button class="mini-action" type="button" data-create-project>Add</button>
+          </div>
+          <form class="add-form hidden" data-project-form>
+            <input name="id" type="hidden" />
+            <label>
+              Project name
+              <input name="title" placeholder="Ocean turtle glow" required />
+            </label>
+            <label>
+              Kit notes
+              <input name="notes" placeholder="Drill shape, deadline, kit notes" required />
+            </label>
+            <label>
+              Bought from
+              <input name="source" placeholder="Shop, website, or artist" />
+            </label>
+            <label>
+              Started on
+              <input name="startedAt" type="date" />
+            </label>
+            <label>
+              Progress percent
+              <input name="progress" type="number" min="0" max="100" value="10" />
+            </label>
+            <p class="field-help">Progress is tracked as a percent. If you enter sections below, Prism Patch calculates the percent from completed sections divided by total sections.</p>
+            <div class="field-grid">
+              <label>
+                Completed sections
+                <input name="completedSections" type="number" min="0" placeholder="4" />
+              </label>
+              <label>
+                Total sections
+                <input name="totalSections" type="number" min="1" placeholder="12" />
+              </label>
+            </div>
+            <label>
+              What to remember
+              <textarea name="details" placeholder="Frame size, missing symbols, storage notes, gift plan"></textarea>
+            </label>
+            <button type="submit" data-project-submit>Save project</button>
+            <button class="text-action hidden" type="button" data-cancel-project-edit>Cancel edit</button>
+          </form>
+          <div class="card-list" data-project-list></div>
+        </section>
+
+        <section class="app-view" data-view="ideas" aria-labelledby="ideas-title">
+          <div class="section-title row-title">
+            <div>
+              <p class="eyebrow">Idea board</p>
+              <h2 id="ideas-title">Future sparkle plans</h2>
+            </div>
+            <button class="mini-action" type="button" data-create-idea>Add</button>
+          </div>
+          <form class="add-form hidden" data-idea-form>
+            <input name="id" type="hidden" />
+            <label>
+              Idea title
+              <input name="title" placeholder="Pet portrait with crystal collar" required />
+            </label>
+            <label>
+              Theme
+              <input name="tag" placeholder="Gift, mood, challenge" required />
+            </label>
+            <label>
+              Details
+              <textarea name="details" placeholder="Colors, kit size, who it is for, links or notes"></textarea>
+            </label>
+            <button type="submit" data-idea-submit>Save idea</button>
+            <button class="text-action hidden" type="button" data-cancel-idea-edit>Cancel edit</button>
+          </form>
+          <section class="detail-panel hidden" data-idea-detail></section>
+          <div class="idea-masonry" data-idea-list></div>
+        </section>
+
+        <section class="app-view" data-view="inventory" aria-labelledby="inventory-title">
+          <div class="section-title">
+            <p class="eyebrow">Inventory</p>
+            <h2 id="inventory-title">Kits and supplies</h2>
+          </div>
+          <form class="add-form inventory-form" data-inventory-form>
+            <label>
+              Item type
+              <select name="type">
+                <option value="notStarted">Diamond paintings not started</option>
+                <option value="wax">Remaining waxes</option>
+                <option value="magnet">Magnets</option>
+                <option value="tray">Trays</option>
+                <option value="pen">Pens</option>
+                <option value="sealer">Sealer</option>
+                <option value="drillCode">Drill color code</option>
+                <option value="note">Something to remember</option>
+              </select>
+            </label>
+            <div class="field-grid">
+              <label>
+                Label or code
+                <input name="label" placeholder="DMC 310, pink wax, mini trays" required />
+              </label>
+              <label>
+                Amount
+                <input name="quantity" type="number" min="0" value="1" />
+              </label>
+            </div>
+            <label>
+              Note
+              <textarea name="note" placeholder="Where it is stored, what kit it belongs to, or anything you want to remember"></textarea>
+            </label>
+            <button type="submit">Save inventory note</button>
+          </form>
+          <div class="inventory-grid" data-inventory-list></div>
+        </section>
+
+        <section class="app-view" data-view="community" aria-labelledby="community-title">
+          <div class="section-title">
+            <p class="eyebrow">Community</p>
+            <h2 id="community-title">Shared inspiration</h2>
+          </div>
+          <section class="detail-panel hidden" data-community-detail></section>
+          <div class="gallery-stack" data-gallery-list></div>
+        </section>
+
+        <section class="app-view" data-view="settings" aria-labelledby="settings-title">
+          <div class="section-title">
+            <p class="eyebrow">Settings</p>
+            <h2 id="settings-title">Your app preferences</h2>
+          </div>
+
+          <form class="settings-form" data-settings-form>
+            <label>
+              Display name
+              <input name="displayName" autocomplete="name" />
+            </label>
+            <label>
+              Date of birth
+              <input name="dateOfBirth" type="date" />
+            </label>
+            <label>
+              Gender
+              <select name="gender">
+                <option value="">Select an option</option>
+                <option value="woman">Woman</option>
+                <option value="man">Man</option>
+                <option value="nonbinary">Non-binary</option>
+                <option value="self-describe">Self-describe</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+              </select>
+            </label>
+            <div class="toggle-row">
+              <span>Share location</span>
+              <label class="switch">
+                <input name="shareLocation" type="checkbox" data-settings-location-toggle />
+                <span></span>
+              </label>
+            </div>
+            <label data-settings-location-field class="muted-field">
+              Location
+              <input name="location" placeholder="City, state or country" />
+            </label>
+            <section class="connection-card settings-map" aria-labelledby="settings-range-title">
+              <div class="section-title">
+                <p class="eyebrow">Connection range</p>
+                <h2 id="settings-range-title">Choose who you want to meet</h2>
+              </div>
+              <div class="segmented-control" role="tablist" aria-label="Connection distance">
+                <button class="segment active" type="button" role="tab" aria-selected="true" data-range="local">Local</button>
+                <button class="segment" type="button" role="tab" aria-selected="false" data-range="states">States</button>
+                <button class="segment" type="button" role="tab" aria-selected="false" data-range="world">World</button>
+              </div>
+              <div class="range-summary" data-active-range="local">
+                <div class="mini-map" aria-hidden="true">
+                  <span class="pin pin-home"></span>
+                  <span class="pin pin-west"></span>
+                  <span class="pin pin-east"></span>
+                  <span class="pin pin-world"></span>
+                </div>
+                <div>
+                  <h3 data-range-heading>Local circles</h3>
+                  <p data-range-copy>Find nearby members for craft nights, framing help, supply swaps, and progress reveals.</p>
+                </div>
+              </div>
+              <input name="connectionRange" type="hidden" value="local" />
+            </section>
+            <div class="toggle-row">
+              <span>Public gallery profile</span>
+              <label class="switch">
+                <input name="publicProfile" type="checkbox" />
+                <span></span>
+              </label>
+            </div>
+            <div class="toggle-row">
+              <span>Progress reminders</span>
+              <label class="switch">
+                <input name="reminders" type="checkbox" />
+                <span></span>
+              </label>
+            </div>
+            <div class="toggle-row">
+              <span>Allow community chat requests</span>
+              <label class="switch">
+                <input name="allowMessages" type="checkbox" />
+                <span></span>
+              </label>
+            </div>
+            <button class="primary-action" type="submit">Save settings</button>
+          </form>
+
+          <button class="danger-action" type="button" data-logout>Sign out</button>
+          <section class="tool-panel legal-panel">
+            <h3>Safety and legal</h3>
+            <a href="legal/privacy.html">Privacy Policy</a>
+            <a href="legal/terms.html">Terms of Use</a>
+            <a href="legal/community-guidelines.html">Community Guidelines</a>
+            <a href="legal/support.html">Support</a>
+          </section>
+          <button class="danger-action" type="button" data-delete-account>Delete account</button>
+        </section>
+      </main>
+
+      <nav class="bottom-tabs" aria-label="App navigation">
+        <button class="tab" type="button" data-nav="projects" aria-label="Projects"><span>▣</span><small>Projects</small></button>
+        <button class="tab" type="button" data-nav="ideas" aria-label="Ideas"><span>✦</span><small>Ideas</small></button>
+        <button class="tab" type="button" data-nav="inventory" aria-label="Inventory"><span>◆</span><small>Inventory</small></button>
+        <button class="tab" type="button" data-nav="community" aria-label="Community"><span>◎</span><small>Community</small></button>
+        <button class="tab" type="button" data-nav="settings" aria-label="Settings"><span>⚙</span><small>Settings</small></button>
+      </nav>
+    </div>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

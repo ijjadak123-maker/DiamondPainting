@@ -1,0 +1,19 @@
+{
+  "appId": "app.prismpatch.mobile",
+  "appName": "Prism Patch",
+  "webDir": "www",
+  "server": {
+    "iosScheme": "https"
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "preferredContentMode": "mobile"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#fff8fc",
+      "showSpinner": false
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "prism-patch",
+  "version": "0.1.0",
+  "description": "Mobile-first diamond painting app with local development backend and iOS packaging path.",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build:web": "node scripts/build-web.js",
+    "check": "node --check server.js && node --check scripts/build-web.js",
+    "ios:sync": "npm run build:web && npx cap sync ios",
+    "ios:open": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^5.7.8",
+    "@capacitor/core": "^5.7.8",
+    "@capacitor/ios": "^5.7.8"
+  }
+}

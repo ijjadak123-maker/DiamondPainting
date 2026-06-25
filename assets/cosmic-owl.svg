@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 600" role="img" aria-label="Mosaic diamond painting of a cosmic owl">
+  <defs>
+    <pattern id="spark" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M12 0 24 12 12 24 0 12Z" fill="#fff" opacity=".14"/>
+      <circle cx="12" cy="12" r="2.8" fill="#fff" opacity=".3"/>
+    </pattern>
+    <radialGradient id="space" cx="50%" cy="35%" r="70%">
+      <stop stop-color="#7e56ff"/>
+      <stop offset=".48" stop-color="#263a8f"/>
+      <stop offset="1" stop-color="#17112d"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="600" rx="48" fill="url(#space)"/>
+  <g fill="#fff">
+    <circle cx="102" cy="118" r="4"/><circle cx="178" cy="82" r="7"/><circle cx="598" cy="124" r="5"/><circle cx="620" cy="388" r="8"/><circle cx="94" cy="424" r="6"/><circle cx="430" cy="72" r="4"/>
+  </g>
+  <g transform="translate(176 88)">
+    <path d="M184 28c-91 0-154 76-154 186 0 130 79 228 154 228s154-98 154-228C338 104 275 28 184 28Z" fill="#5c39a7"/>
+    <path d="M68 153C39 87 49 46 95 28c37 30 56 74 58 132M300 153c29-66 19-107-27-125-37 30-56 74-58 132" fill="#8d55ff"/>
+    <circle cx="126" cy="184" r="58" fill="#fff1a3"/>
+    <circle cx="242" cy="184" r="58" fill="#fff1a3"/>
+    <circle cx="126" cy="184" r="24" fill="#24163d"/>
+    <circle cx="242" cy="184" r="24" fill="#24163d"/>
+    <path d="M184 213 154 267h60Z" fill="#ffb83e"/>
+    <path d="M92 296c53 47 130 47 184 0" fill="none" stroke="#49dcb1" stroke-width="16" stroke-linecap="round"/>
+    <path d="M99 356c50 31 116 31 170 0" fill="none" stroke="#ff4fa3" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <rect width="720" height="600" rx="48" fill="url(#spark)"/>
+</svg>

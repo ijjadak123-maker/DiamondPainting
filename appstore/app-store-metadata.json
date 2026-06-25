@@ -1,0 +1,28 @@
+{
+  "name": "Prism Patch",
+  "subtitle": "Diamond painting planner",
+  "bundleId": "app.prismpatch.mobile",
+  "sku": "PRISM-PATCH-IOS-001",
+  "primaryCategory": "Lifestyle",
+  "secondaryCategory": "Social Networking",
+  "contentRights": "Uses original app artwork and user-submitted craft content.",
+  "ageRatingRecommendation": "13+ because the app includes account-based community sharing and user-generated content controls.",
+  "promotionalText": "Organize diamond painting projects, track supplies, save ideas, and share inspiration with a safer craft community.",
+  "description": "Prism Patch is a mobile-first studio for diamond painting enthusiasts. Track works in progress, save future canvas ideas, manage kit and supply inventory, plan what to work on next, and browse community inspiration with report and block controls.",
+  "keywords": [
+    "diamond painting",
+    "craft planner",
+    "project tracker",
+    "kit and supply inventory",
+    "craft community",
+    "sparkle art"
+  ],
+  "supportUrl": "https://api.prismpatch.app/legal/support.html",
+  "privacyPolicyUrl": "https://api.prismpatch.app/legal/privacy.html",
+  "marketingUrl": "",
+  "reviewDemoAccount": {
+    "email": "demo@prismpatch.app",
+    "password": "sparkle123"
+  },
+  "reviewNotes": "Use the demo account below or tap Use built-in demo on the sign-in screen. Community posts include Report and Block controls. Optional chat requests can be turned off in Settings. Location sharing is optional and off by default. Date of birth and gender are collected during first-time profile setup for safety and personalization. No in-app purchases are included in this build."
+}
