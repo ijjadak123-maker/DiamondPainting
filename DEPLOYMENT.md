@@ -22,7 +22,7 @@ https://api.prismpatch.app/legal/community-guidelines.html
 - Production refuses to start unless `PRISM_PATCH_SECRET` is set.
 - CORS allows the iOS Capacitor app origin and `https://api.prismpatch.app`.
 - A fresh hosted server creates the starting JSON database if `data/db.json` is missing.
-- `render.yaml` is included for a Render web service with a persistent disk mounted at `data/`.
+- `render.yaml` is included for Render's free web service.
 - `Dockerfile` is included for providers that prefer Docker.
 
 ## Render Deployment
@@ -31,13 +31,13 @@ https://api.prismpatch.app/legal/community-guidelines.html
 2. In Render, create a new Blueprint or Web Service from the repository.
 3. Use these settings if creating the service manually:
    - Runtime: Node
+   - Plan: Free
    - Build command: `npm install`
    - Start command: `npm start`
    - Health check path: `/api/health`
    - Environment variable: `NODE_ENV=production`
    - Environment variable: `PRISM_PATCH_SECRET=<long random secret>`
    - Environment variable: `ALLOWED_ORIGINS=capacitor://localhost,ionic://localhost,https://api.prismpatch.app`
-   - Persistent disk mount path: `/opt/render/project/src/data`
 4. Add the custom domain `api.prismpatch.app` to the Render service.
 5. In your domain DNS settings, create the DNS record Render gives you for `api.prismpatch.app`.
 6. Wait for Render to issue the HTTPS certificate.
@@ -58,3 +58,9 @@ Expected response:
 ## App Store Note
 
 The iOS app is already configured to call `https://api.prismpatch.app/api`. Until the domain is live, the app will use device-local accounts and storage so it remains usable for testing.
+
+## Free Hosting Note
+
+This setup avoids paid Render services by not using a persistent disk or managed database. The hosted backend can still serve the API and legal pages, but user-created server data may reset when the free service restarts, redeploys, or rebuilds. The app keeps built-in demo data and device-local storage so it remains usable for App Review testing.
+
+Before opening the app to real users, upgrade the backend storage to either a paid persistent disk or a database so accounts, projects, inventory, ideas, community posts, and chats are not lost.
